@@ -53,7 +53,7 @@ grouped = df.groupby(['lat_rounded', 'lng_rounded'], as_index=False)['user_count
 grouped.rename(columns={'lat_rounded': 'lat', 'lng_rounded': 'lng'}, inplace=True)
 
 # 🗺️ Create Folium map
-m = folium.Map(location=[43.7, -79.4], zoom_start=7)
+m = folium.Map(location=[43.7, -79.4], zoom_start=8)
 
 # 🔥 Add density heatmap
 heat_data = grouped[['lat', 'lng', 'user_count']].values.tolist()
